@@ -14,7 +14,7 @@ buildscript {
 
 plugins {
     id 'java'
-    id 'org.asciidoctor.convert' version '2.3.0'
+    id 'org.asciidoctor.convert' version '2.4.0'
 }
 apply from: 'gradle/publishing.gradle'
 apply from: 'gradle/coverage.gradle'
