@@ -43,7 +43,7 @@ dependencies {
     implementation group: 'commons-codec', name: 'commons-codec', version: '1.13'
     implementation group: 'nl.jworks.markdown_to_asciidoc', name: 'markdown_to_asciidoc', version: '1.1'
     implementation group: 'org.pegdown', name: 'pegdown', version: '1.6.0'
-    testImplementation group: 'junit', name: 'junit', version: '4.12'
+    testImplementation group: 'junit', name: 'junit', version: '4.13.2'
     testImplementation group: 'io.github.robwin', name: 'assertj-diff', version: '0.1.1'
     testImplementation group: 'org.mockito', name: 'mockito-core', version: '3.1.0'
     testImplementation group: 'ch.qos.logback', name: 'logback-classic', version: '1.2.3'
