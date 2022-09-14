@@ -93,6 +93,17 @@ public final class ConfluenceMarkupBuilder extends AbstractMarkupDocBuilder {
     }
 
     @Override
+    public MarkupDocBuilder tableOfContent() {
+        documentBuilder.append(":toc:").append(newLine);
+        return this;
+    }
+
+    @Override
+    public MarkupDocBuilder toc() {
+        return tableOfContent();
+    }
+
+    @Override
     public MarkupDocBuilder sectionTitleLevel(int level, String title) {
         Validate.notBlank(title, "title must not be blank");
         Validate.inclusiveBetween(1, MAX_TITLE_LEVEL, level);

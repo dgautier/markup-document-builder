@@ -37,6 +37,12 @@ public interface MarkupDocBuilder {
      */
     MarkupDocBuilder documentTitle(String title);
 
+    MarkupDocBuilder tableOfContent();
+
+    MarkupDocBuilder toc();
+
+    MarkupDocBuilder checkboxList(List<CheckboxItem> items, boolean interactive);
+
     /**
      * Builds a section {@code title}.
      *

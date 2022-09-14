@@ -31,6 +31,7 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import io.github.swagger2markup.markup.builder.CheckboxItem;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.Validate;
@@ -98,6 +99,21 @@ public abstract class AbstractMarkupDocBuilder implements MarkupDocBuilder {
     protected void documentTitle(Markup markup, String title) {
         Validate.notBlank(title, "title must not be blank");
         documentBuilder.append(markup).append(replaceNewLinesWithWhiteSpace(title)).append(newLine).append(newLine);
+    }
+
+    @Override
+    public MarkupDocBuilder tableOfContent() {
+        throw new UnsupportedOperationException("Cannot create table of content for " + getMarkupLanguage().toString());
+    }
+
+    @Override
+    public MarkupDocBuilder toc() {
+        return tableOfContent();
+    }
+
+    @Override
+    public MarkupDocBuilder checkboxList(List<CheckboxItem> items, boolean interactive) {
+        throw new UnsupportedOperationException("Cannot create table of content for " + getMarkupLanguage().toString());
     }
 
     protected void sectionTitleLevel(Markup markup, int level, String title) {
@@ -526,7 +542,7 @@ public abstract class AbstractMarkupDocBuilder implements MarkupDocBuilder {
                 throw new RuntimeException("Failed create directory", e);
             }
         }
-        
+
         try (BufferedWriter writer = Files.newBufferedWriter(file, charset, options)) {
             writer.write(toString());
             writer.write(newLine);

@@ -83,6 +83,28 @@ public class AsciiDocBuilder extends AbstractMarkupDocBuilder {
     }
 
     @Override
+    public MarkupDocBuilder tableOfContent() {
+        documentBuilder.append(":toc:").append(newLine);
+        return this;
+    }
+
+    @Override
+    public MarkupDocBuilder toc() {
+        return tableOfContent();
+    }
+
+    @Override
+    public MarkupDocBuilder checkboxList(List<CheckboxItem> items, boolean interactive) {
+
+        if (interactive) {
+            documentBuilder.append("[%interactive]").append(newLine);
+        }
+        items.forEach(item -> documentBuilder.append("* [").append(item.isChecked() ? "*" : " ").append("]").append(" ").append(item.getLine()).append(newLine));
+        documentBuilder.append(newLine);
+        return this;
+    }
+
+    @Override
     public MarkupDocBuilder sectionTitleLevel(int level, String title) {
         sectionTitleLevel(AsciiDoc.TITLE, level, title);
         return this;
