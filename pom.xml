@@ -2,13 +2,79 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>io.github.aferre</groupId>
+    <groupId>io.github.dgautier</groupId>
     <artifactId>markup-document-builder</artifactId>
-    <version>1.1.7-SNAPSHOT</version>
+    <version>2.0.0-SNAPSHOT</version>
+
+    <name>Markup Document Builder</name>
+    <description>This project is a Markup document builder (AsciiDoc, Markdown and ConfluenceWiki).
+        Forked from : https://github.com/Swagger2Markup/markup-document-builder
+    </description>
+    <url>https://github.com/dgautier/markup-document-builder</url>
+
+    <licenses>
+        <license>
+            <name>The Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <id>Kabhal</id>
+            <name>Hugo de Paix de Coeur</name>
+        </developer>
+        <developer>
+            <id>RobWin</id>
+            <name>Robert Winkler</name>
+            <url>https://twitter.com/rbrtwnklr</url>
+        </developer>
+        <developer>
+            <id>cascer1</id>
+            <email>github@cascer1.space</email>
+        </developer>
+        <developer>
+            <id>2bad4u</id>
+            <name>André Schubert</name>
+        </developer>
+        <developer>
+            <id>johanhammar</id>
+            <name>Johan Hammar</name>
+            <url>https://www.johanhammar.se</url>
+        </developer>
+        <developer>
+            <id>austek</id>
+            <name>Ali Ustek</name>
+            <url>https://github.com/austek</url>
+        </developer>
+        <developer>
+            <id>sjonnalagadda</id>
+            <url>https://github.com/sjonnalagadda</url>
+        </developer>
+        <developer>
+            <id>BuJo</id>
+            <name>Jonathan Buch</name>
+            <url>http://www.jonathan-buch.de/</url>
+        </developer>
+        <developer>
+            <id>aferre</id>
+            <name>Adrien Ferré</name>
+            <url>http://afewe.wordpress.com</url>
+        </developer>
+        <developer>
+            <id>dgautier</id>
+            <name>David Gautier</name>
+            <url>https://dgautier.github.io</url>
+        </developer>
+    </developers>
+
     <scm>
-        <developerConnection>scm:git:https://github.com/aferre/markup-document-builder.git</developerConnection>
+        <connection>scm:git:https://github.com/dgautier/markup-document-builder.git</connection>
+        <url>https://github.com/dgautier/markup-document-builder.git</url>
+        <developerConnection>scm:git:https://github.com/dgautier/markup-document-builder.git</developerConnection>
         <tag>HEAD</tag>
     </scm>
+
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
